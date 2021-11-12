@@ -4,13 +4,16 @@ $db_user = 'root';
 $db_password = 'root';
 $db_db = 'moyenne';
 $db_port = 8889;
-
-$mysqli = new mysqli(
-    $db_host,
-    $db_user,
-    $db_password,
-    $db_db
-);
+try {
+    $db = new PDO('mysql:host=localhost;port=8889;dbname=moyenne',
+        'root',
+        'root'
+    );}
+catch(Exception $e)
+{
+    // En cas d'erreur, on affiche un message et on arrête tout
+    die('Erreur : '.$e->getMessage());
+}
 //
 //if ($mysqli->connect_error) {
 //    echo 'Errno: '.$mysqli->connect_errno;

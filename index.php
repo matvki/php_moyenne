@@ -1,5 +1,5 @@
 <?php session_start();
-if (isset($_SESSION['error'])) {?>
+if (isset($_SESSION['error'])) {?> <!-- Message d'erreur si une mauvaise valeur est rentrée.-->
     <p style="color: red">Au moins une des entrée était "0", ce n'est pas une valeur acceptable, veuillez rentrer une autre valeur.</p>
 <?php }
 session_destroy();
