@@ -21,6 +21,4 @@ create table if not exists note
 
 alter table note
 	add primary key (id);
-
-
 ```
